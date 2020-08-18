@@ -29,8 +29,4 @@ for (i in filenames) {
            select(-X))
 }
 
-# Create wide format for compounds ----------------------------------------
-test <- BMISd_CmpdNamesFixed %>%
-  separate(Replicate.Name, into = c("one", "two", "SampID", "four")) %>%
-  mutate(Averaged.Value)
-  unite(combined.column, c("Mass.Feature", "Replicate.Name"), sep = "_")
+
